@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: triptrack-server
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: node dist/src/index.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+      # Add other env vars in Render dashboard
+
